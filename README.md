@@ -82,6 +82,35 @@ export default {
 </script>
 ```
 
+Event listeners for different conversations
+```
+<template>
+  <div>
+    You've voted on {{ firstVotes }} comments for conversation 1 this session.
+    You've voted on {{ secondVotes }} comments for conversation 1 this session.
+    <Polis :conversation_id="first_conversation_id" @vote="firstVotes += 1"/>
+    <Polis :conversation_id="second_conversation_id" @vote="secondVotes += 1"/>
+  </div>
+</template>
+
+<script>
+import Polis from "./components/Polis";
+export default {
+  components: {
+    Polis
+  },
+  data(){
+    return {
+      firstVotes: 0,
+      secondVotes: 0,
+      first_conversation_id: "some_conversation_id",
+      second_conversation_id: "some_other_conversation_id",
+    }
+  }
+}
+</script>
+```
+
 ## Project setup
 ```
 npm install
