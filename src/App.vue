@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    Your conversation id: <input v-model="conversation_id"/>
-    Your xid: <input v-model="xid"/>
-    <Polis conversation_id="conversation_id" @vote="celebrate"/>
+    Editable - Your conversation id: <input v-model="conversation_id"/>
+    Editable - Your xid: <input v-model="xid"/>
+    <Polis :conversation_id="conversation_id" @vote="celebrate"/>
   </div>
 </template>
 
