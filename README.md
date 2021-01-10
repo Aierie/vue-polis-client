@@ -10,6 +10,8 @@ Supply config to the component - for each [data attribute](https://roamresearch.
 
 You'll need to supply either `conversation_id` or both `site_id` and `page_id`, or the component will throw an error.
 
+Watch out when changing props passed to this component, any changes will cause the iframe to reload. Might change this in the near future.
+
 ## Project setup
 ```
 npm install
