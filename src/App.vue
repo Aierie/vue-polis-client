@@ -1,17 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    Your conversation id: <input v-model="conversation_id"/>
+    Your xid: <input v-model="xid"/>
+    <Polis conversation_id="" :xid="xid" @vote="celebrate"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Polis from './components/Polis.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Polis
+  },
+  data(){
+    return {
+      xid: "",
+      conversation_id: ""
+    }
+  },
+  methods: {
+    celebrate(){
+      alert("whoo! a vote")
+    }
   }
 }
 </script>
