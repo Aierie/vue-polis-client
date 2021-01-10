@@ -60,8 +60,10 @@ export default {
 Adding an event listener for a vote
 ```
 <template>
-  You've voted on {{ votes }} comments this session.
-  <Polis :conversation_id="conversation_id" @vote="votes += 1"/>
+  <div>
+    You've voted on {{ votes }} comments this session.
+    <Polis :conversation_id="conversation_id" @vote="votes += 1"/>
+  </div>
 </template>
 
 <script>
