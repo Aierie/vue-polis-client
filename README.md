@@ -87,7 +87,7 @@ Event listeners for different conversations
 <template>
   <div>
     You've voted on {{ firstVotes }} comments for conversation 1 this session.
-    You've voted on {{ secondVotes }} comments for conversation 1 this session.
+    You've voted on {{ secondVotes }} comments for conversation 2 this session.
     <Polis :conversation_id="first_conversation_id" @vote="firstVotes += 1"/>
     <Polis :conversation_id="second_conversation_id" @vote="secondVotes += 1"/>
   </div>
