@@ -4,7 +4,7 @@ To run this, install dependencies, update `conversation_id` and `xid`(if you wan
 ## About the component
 Component currently lives in `src/components/Polis.vue`. It is adapted from the [polis embed](https://pol.is/embed.js) for Vue so that it can interact better with Vue's reactivity and provide more room for behavior / ui customization.
 
-You can listen for polis events (vote, write, doneVoting, init) on the component by using the [v-on directive](https://vuejs.org/v2/guide/events.html).
+You can listen for polis events that are sent via `window.postMessage` (vote, write, doneVoting, init) on the component by using the [v-on directive](https://vuejs.org/v2/guide/events.html). As there is no good way to do resizing with current props, there is no listener for the `resize` event exposed at the moment.
 
 Supply config to the component - for each [data attribute](https://roamresearch.com/#/app/polis-methods/page/urQE1Ik_L) you would place on the embed div, just use the part after `data-`. so to supply `conversation_id`, you would do `:conversation_id="yourConversationId"`.
 
