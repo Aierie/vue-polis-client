@@ -2,12 +2,13 @@
   <div id="app">
     Your conversation id: <input v-model="conversation_id"/>
     Your xid: <input v-model="xid"/>
-    <Polis conversation_id="" :xid="xid" @vote="celebrate"/>
+    <Polis conversation_id="conversation_id" @vote="celebrate"/>
   </div>
 </template>
 
 <script>
 import Polis from './components/Polis.vue'
+import polisVariables from "./polisVariables";
 
 export default {
   name: 'App',
@@ -16,8 +17,8 @@ export default {
   },
   data(){
     return {
-      xid: "",
-      conversation_id: ""
+      xid: polisVariables.xid,
+      conversation_id: polisVariables.conversation_id
     }
   },
   methods: {

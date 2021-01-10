@@ -1,5 +1,8 @@
 # vue-polis-client
+To run this, update `conversation_id` and `xid`(if you want) in `src/polisVariables.js`, and then `npm run serve`.
 
+## About the component
+Component currently lives in `src/components/Polis.vue`. It is adapted from the [polis embed](https://pol.is/embed.js) for Vue so that it can interact better with Vue's reactivity and provide more room for behavior / ui customization.
 ## Project setup
 ```
 npm install
