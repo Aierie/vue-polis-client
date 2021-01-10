@@ -72,7 +72,8 @@ export default {
   },
   data(){
     return {
-      votes: 0
+      votes: 0,
+      conversation_id: "some_conversation_id"
     }
   }
 }
